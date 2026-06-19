@@ -1,0 +1,392 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JJ_DEV — Web Developer</title>
+<meta name="description" content="Portfolio of Javeria Javed, Web Developer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<div class="grid-overlay" aria-hidden="true"></div>
+ 
+<a class="skip-link" href="#main">Skip to content</a>
+ 
+<header class="nav-wrap">
+  <nav class="nav">
+    <a href="#home" class="nav__logo">JJ_DEV<span class="cursor-blink">_</span></a>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#about"><span class="idx">01</span>About</a></li>
+      <li><a href="#skills"><span class="idx">02</span>Skills</a></li>
+      <li><a href="#projects"><span class="idx">03</span>Projects</a></li>
+      <li><a href="#experience"><span class="idx">04</span>Experience</a></li>
+      <li><a href="#contact"><span class="idx">05</span>Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav__cta">Let's talk</a>
+  </nav>
+</header>
+ 
+<main id="main">
+ 
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero__inner">
+      <p class="eyebrow">// portfolio.init()</p>
+      <h1 class="hero__title">
+        Hi, I'm <span class="accent">Javeria Javed</span><br>
+        I build things for the web.
+      </h1>
+      <p class="hero__subtitle">Full Stack Web Developer crafting fast, accessible, and thoughtful digital products — from database to pixel.</p>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">View Projects</a>
+        <a href="assets/resume.pdf" class="btn btn--ghost" download>Download Resume</a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat"><span class="stat__num">5+</span><span class="stat__label">Projects Shipped</span></div>
+        <div class="stat"><span class="stat__num">2+</span><span class="stat__label">Years Experience</span></div>
+        <div class="stat"><span class="stat__num">5+</span><span class="stat__label">Technologies</span></div>
+      </div>
+    </div>
+ 
+    <div class="hero__panel" aria-hidden="true">
+      <div class="code-window">
+        <div class="code-window__bar">
+          <span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span>
+          <span class="code-window__file">developer.js</span>
+        </div>
+        <pre class="code-window__body"><code><span class="tok-key">const</span> <span class="tok-var">developer</span> = {
+  <span class="tok-prop">name</span>: <span class="tok-str">'Javeria Javed'</span>,
+  <span class="tok-prop">role</span>: <span class="tok-str">'Full Stack Web Developer'</span>,
+  <span class="tok-prop">stack</span>: [<span class="tok-str">'Laravel'</span>, <span class="tok-str">'HTML'</span>, <span class="tok-str">'CSS'</span>],
+  <span class="tok-prop">passion</span>: <span class="tok-str">'clean code'</span>,
+  <span class="tok-prop">available</span>: <span class="tok-key">true</span>,
+};
+ 
+<span class="tok-key">function</span> <span class="tok-fn">hire</span>(<span class="tok-var">developer</span>) {
+  <span class="tok-key">return</span> <span class="tok-str">'great decisions ahead'</span>;
+}<span class="typed-cursor">|</span></code></pre>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <p class="section__label">// 01 — about</p>
+    <div class="about__grid">
+      <div class="about__text">
+        <h2 class="section__title">A bit about how I think.</h2>
+        <p>I'm a Software Engineer who likes turning ambiguous problems into clean, working systems. My focus is full-stack web development — comfortable wiring up a database, building an API, and finishing the job with an interface people actually enjoy using.</p>
+        <p>I care about readable code, sensible architecture, and shipping things that hold up after the demo is over. Outside of work I'm usually breaking something on purpose just to learn how it's built.</p>
+        <ul class="about__facts">
+          <li><span class="fact__k">Based in</span><span class="fact__v">Islamabad, Pakistan</span></li>
+          <li><span class="fact__k">Focus</span><span class="fact__v">Full Stack Web Development</span></li>
+          <li><span class="fact__k">Currently</span><span class="fact__v">Open to opportunities</span></li>
+        </ul>
+      </div>
+      <div class="about__visual" aria-hidden="true">
+        <div class="terminal">
+          <div class="terminal__bar"><span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span></div>
+          <div class="terminal__body">
+            <p><span class="prompt">$</span> whoami</p>
+            <p class="out">your_name</p>
+            <p><span class="prompt">$</span> cat focus.txt</p>
+            <p class="out">Building reliable, well-crafted web apps.</p>
+            <p><span class="prompt">$</span> <span class="typed-cursor">|</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- SKILLS -->
+  <section class="section section--alt" id="skills">
+    <p class="section__label">// 02 — skills</p>
+    <h2 class="section__title">Tools of the trade.</h2>
+    <div class="skills__grid">
+ 
+      <div class="skill-card">
+        <h3 class="skill-card__title">Languages</h3>
+        <ul class="skill-card__list">
+          <li>JavaScript / TypeScript</li>
+          <li>HTML</li>
+          <li>CSS3</li>
+          <li>SQL</li>
+        </ul>
+      </div>
+ 
+      <div class="skill-card">
+        <h3 class="skill-card__title">Frontend</h3>
+        <ul class="skill-card__list">
+          <li>JQUERY</li>
+          <li>JavaScript</li>
+          <li>CSS</li>
+          <li>Responsive / Accessible UI</li>
+        </ul>
+      </div>
+ 
+      <div class="skill-card">
+        <h3 class="skill-card__title">Backend</h3>
+        <ul class="skill-card__list">
+          <li>Laravel</li>
+          <li>SQL</li>
+          <li>PHP</li>
+          <li>Authentication & Security</li>
+        </ul>
+      </div>
+ 
+      <div class="skill-card">
+        <h3 class="skill-card__title">Tooling</h3>
+        <ul class="skill-card__list">
+          <li>Git & GitHub</li>
+          <li>Docker</li>
+          <li>CI/CD Basics</li>
+          <li>Testing (Jest)</li>
+        </ul>
+      </div>
+ 
+    </div>
+  </section>
+ 
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <p class="section__label">// 03 — projects</p>
+    <h2 class="section__title">Things I've built.</h2>
+ 
+    <div class="projects__grid">
+ 
+      <article class="project-card">
+  <div class="project-card__top">
+    <span class="project-card__num">01</span>
+    <div class="project-card__links">
+      
+      <!-- LIVE DEMO (agar nahi hai to GitHub use karo) -->
+      <a href="https://github.com/javeria-01/laravel-blog-management-system" target="_blank">
+        Live ↗
+      </a>
+
+      <a href="https://github.com/javeria-01/laravel-blog-management-system" target="_blank">
+        Code ↗
+      </a>
+
+    </div>
+  </div>
+
+  <h3 class="project-card__title">Laravel Blog Management System</h3>
+  
+  <p class="project-card__desc">
+    A full-featured CRUD blog system built with Laravel where users can create, edit, delete and view posts with authentication support.
+  </p>
+
+  <ul class="tag-list">
+    <li>Laravel</li>
+    <li>PHP</li>
+    <li>MySQL</li>
+    <li>Bootstrap</li>
+  </ul>
+</article>
+ 
+      <article class="project-card">
+        <div class="project-card__top">
+          <span class="project-card__num">02</span>
+          <div class="project-card__links">
+            <a href="#" aria-label="Live demo">Live ↗</a>
+            <a href="#" aria-label="Source code">Code ↗</a>
+          </div>
+        </div>
+        <h3 class="project-card__title">Project Two</h3>
+        <p class="project-card__desc">A short description of what this project does and the problem it solves for its users.</p>
+        <ul class="tag-list"><li>Next.js</li><li>PostgreSQL</li><li>Stripe</li></ul>
+      </article>
+ 
+      <article class="project-card">
+        <div class="project-card__top">
+          <span class="project-card__num">03</span>
+          <div class="project-card__links">
+            <a href="#" aria-label="Live demo">Live ↗</a>
+            <a href="#" aria-label="Source code">Code ↗</a>
+          </div>
+        </div>
+        <h3 class="project-card__title">Project Three</h3>
+        <p class="project-card__desc">A short description of what this project does and the problem it solves for its users.</p>
+        <ul class="tag-list"><li>Python</li><li>Flask</li><li>Docker</li></ul>
+      </article>
+ 
+      <article class="project-card">
+        <div class="project-card__top">
+          <span class="project-card__num">04</span>
+          <div class="project-card__links">
+            <a href="#" aria-label="Live demo">Live ↗</a>
+            <a href="#" aria-label="Source code">Code ↗</a>
+          </div>
+        </div>
+        <h3 class="project-card__title">Project Four</h3>
+        <p class="project-card__desc">A short description of what this project does and the problem it solves for its users.</p>
+        <ul class="tag-list"><li>React</li><li>Express</li><li>Redis</li></ul>
+      </article>
+ 
+      <article class="project-card">
+        <div class="project-card__top">
+          <span class="project-card__num">05</span>
+          <div class="project-card__links">
+            <a href="#" aria-label="Live demo">Live ↗</a>
+            <a href="#" aria-label="Source code">Code ↗</a>
+          </div>
+        </div>
+        <h3 class="project-card__title">Project Five</h3>
+        <p class="project-card__desc">A short description of what this project does and the problem it solves for its users.</p>
+        <ul class="tag-list"><li>TypeScript</li><li>GraphQL</li><li>AWS</li></ul>
+      </article>
+ 
+      <article class="project-card project-card--more">
+        <h3 class="project-card__title">More on GitHub</h3>
+        <p class="project-card__desc">Check out the rest of my work and contributions.</p>
+        <a href="#" class="btn btn--ghost btn--sm">Visit GitHub ↗</a>
+      </article>
+ 
+    </div>
+  </section>
+ 
+  <!-- EXPERIENCE -->
+  <section class="section section--alt" id="experience">
+    <p class="section__label">// 04 — experience</p>
+    <h2 class="section__title">Where I've worked.</h2>
+ 
+    <div class="timeline">
+ 
+      <div class="timeline__item">
+        <div class="timeline__date">Feb 2025 — May 2026</div>
+        <div class="timeline__content">
+          <h3>Full Stack Developer <span class="at"> - Alfa Solutions</span></h3>
+          <p>
+             </ul>
+            
+              <li>
+              Developed responsive web applications using Laravel, PHP, HTML,
+CSS, JavaScript, and Bootstrap.
+              </li>
+            
+
+            </ul>
+
+             </ul>
+            
+              <li>
+              Worked with team to add new features and improve backend
+functionality based on requirements.
+              </li>
+            
+
+            </ul>
+
+             </ul>
+            
+              <li>
+               Assisted in debugging and optimizing Laravel applications for
+better performance and user experience
+              </li>
+            
+
+            </ul>
+          </p>
+        </div>
+      </div>
+
+       <div class="timeline">
+ 
+      <div class="timeline__item">
+        <div class="timeline__date">Oct 2024 — Jan 2025</div>
+        <div class="timeline__content">
+          <h3>Web Developer Intern <span class="at"> - Alfa Solutions</span></h3>
+          <p>
+             </ul>
+            
+              <li>
+                 Completed internship at Alfa Solution, working on web
+applications using  Laravel, HTML, CSS, JavaScript, and
+Bootstrap.
+              </li>
+            
+
+            </ul>
+
+             </ul>
+            
+              <li>
+                  Assisted in developing features and understanding MVC
+structure in Laravel under senior developer guidance.
+              </li>
+            
+
+            </ul>
+
+             </ul>
+            
+              <li>
+                Helped in debugging and improving performance of web pages
+and backend functionality
+              </li>
+            
+
+            </ul>
+          </p>
+        </div>
+      </div>
+ 
+      
+ 
+  
+            
+           
+          
+            
+             
+        
+  </section>
+ 
+  <!-- CONTACT -->
+  <section class="section section--contact" id="contact">
+    <p class="section__label">// 05 — contact</p>
+    <h2 class="section__title">Let's build something.</h2>
+    <p class="contact__sub">Have a project in mind, or just want to say hi? My inbox is open.</p>
+ 
+    <form class="contact__form" id="contactForm" novalidate>
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn--primary">Send message</button>
+      <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+ 
+    <div class="contact__socials">
+      <a href="mailto:you@example.com">Email</a>
+      <a href="#" target="_blank" rel="noopener">GitHub</a>
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#" target="_blank" rel="noopener">Twitter</a>
+    </div>
+  </section>
+ 
+</main>
+ 
+<footer class="footer">
+  <p>// built by JAVERIA — <span id="year"></span></p>
+</footer>
+ 
+<script src="main.js"></script>
+</body>
+</html>
