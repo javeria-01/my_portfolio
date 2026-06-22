@@ -1,4 +1,21 @@
 // ============================================
+// Theme toggle (dark / light)
+// ============================================
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+
+// Load saved theme from localStorage, default to dark
+const savedTheme = localStorage.getItem('theme') || 'dark';
+html.setAttribute('data-theme', savedTheme);
+
+themeToggle.addEventListener('click', () => {
+  const current = html.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+});
+
+// ============================================
 // Mobile nav toggle
 // ============================================
 const navToggle = document.getElementById('navToggle');
@@ -43,7 +60,6 @@ revealTargets.forEach(el => observer.observe(el));
 const form = document.getElementById('contactForm');
 const status = document.getElementById('formStatus');
 
-// Helper: show error under a field
 function showError(input, message) {
   clearError(input);
   input.style.borderColor = '#F87171';
@@ -54,19 +70,16 @@ function showError(input, message) {
   input.parentNode.appendChild(err);
 }
 
-// Helper: remove error from a field
 function clearError(input) {
   input.style.borderColor = '';
   const existing = input.parentNode.querySelector('.field-error');
   if (existing) existing.remove();
 }
 
-// Email format check
 function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-// Clear errors when user starts typing
 if (form) {
   form.querySelectorAll('input, textarea').forEach(input => {
     input.addEventListener('input', () => clearError(input));
@@ -83,7 +96,6 @@ if (form) {
     const email   = emailInput.value.trim();
     const message = messageInput.value.trim();
 
-    // --- Validation ---
     let hasError = false;
 
     if (!name) {
@@ -110,9 +122,8 @@ if (form) {
       hasError = true;
     }
 
-    if (hasError) return; // stop here if any field is wrong
+    if (hasError) return;
 
-    // --- Submit to Formspree ---
     status.textContent = 'Sending...';
     status.style.color = 'var(--accent)';
 

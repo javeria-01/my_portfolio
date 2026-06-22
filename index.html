@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JJ_DEV — Web Developer</title>
-<meta name="description" content="Portfolio of Javeria Javed, Web Developer.">
+<title>Javeria Javed — Full Stack Web Developer</title>
+<meta name="description" content="Portfolio of Javeria Javed, Full Stack Web Developer based in Islamabad, Pakistan. Specializing in Laravel, PHP, and MySQL.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
- 
+
 <div class="grid-overlay" aria-hidden="true"></div>
- 
+
 <a class="skip-link" href="#main">Skip to content</a>
- 
+
 <header class="nav-wrap">
   <nav class="nav">
     <a href="#home" class="nav__logo">JJ_DEV<span class="cursor-blink">_</span></a>
@@ -29,12 +29,34 @@
       <li><a href="#experience"><span class="idx">04</span>Experience</a></li>
       <li><a href="#contact"><span class="idx">05</span>Contact</a></li>
     </ul>
-    <a href="#contact" class="nav__cta">Let's talk</a>
+    <div class="nav__right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+        <span class="theme-toggle__icon">
+          <!-- Sun icon (light mode) -->
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <!-- Moon icon (dark mode) -->
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </span>
+      </button>
+      <a href="#contact" class="nav__cta">Let's talk</a>
+    </div>
   </nav>
 </header>
- 
+
 <main id="main">
- 
+
   <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero__inner">
@@ -50,11 +72,11 @@
       </div>
       <div class="hero__stats">
         <div class="stat"><span class="stat__num">5+</span><span class="stat__label">Projects Shipped</span></div>
-        <div class="stat"><span class="stat__num">2+</span><span class="stat__label">Years Experience</span></div>
+        <div class="stat"><span class="stat__num">1+</span><span class="stat__label">Years Experience</span></div>
         <div class="stat"><span class="stat__num">10+</span><span class="stat__label">Technologies</span></div>
       </div>
     </div>
- 
+
     <div class="hero__panel" aria-hidden="true">
       <div class="code-window">
         <div class="code-window__bar">
@@ -64,29 +86,31 @@
         <pre class="code-window__body"><code><span class="tok-key">const</span> <span class="tok-var">developer</span> = {
   <span class="tok-prop">name</span>: <span class="tok-str">'Javeria Javed'</span>,
   <span class="tok-prop">role</span>: <span class="tok-str">'Full Stack Web Developer'</span>,
-  <span class="tok-prop">stack</span>: [<span class="tok-str">'Laravel'</span>, <span class="tok-str">'HTML'</span>, <span class="tok-str">'CSS'</span>],
+  <span class="tok-prop">stack</span>: [<span class="tok-str">'Laravel'</span>, <span class="tok-str">'PHP'</span>,
+           <span class="tok-str">'MySQL'</span>, <span class="tok-str">'HTML'</span>,
+           <span class="tok-str">'CSS'</span>, <span class="tok-str">'JavaScript'</span>],
   <span class="tok-prop">passion</span>: <span class="tok-str">'clean code'</span>,
   <span class="tok-prop">available</span>: <span class="tok-key">true</span>,
 };
- 
+
 <span class="tok-key">function</span> <span class="tok-fn">hire</span>(<span class="tok-var">developer</span>) {
   <span class="tok-key">return</span> <span class="tok-str">'great decisions ahead'</span>;
 }<span class="typed-cursor">|</span></code></pre>
       </div>
     </div>
   </section>
- 
+
   <!-- ABOUT -->
   <section class="section" id="about">
     <p class="section__label">// 01 — about</p>
     <div class="about__grid">
       <div class="about__text">
         <h2 class="section__title">A bit about how I think.</h2>
-        <p>I'm a Software Engineer who likes turning ambiguous problems into clean, working systems. My focus is full-stack web development — comfortable wiring up a database, building an API, and finishing the job with an interface people actually enjoy using.</p>
+        <p>I'm a Full Stack Web Developer who likes turning ambiguous problems into clean, working systems. My focus is Laravel-based web development — comfortable wiring up a database, building backend logic, and finishing the job with an interface people actually enjoy using.</p>
         <p>I care about readable code, sensible architecture, and shipping things that hold up after the demo is over. Outside of work I'm usually breaking something on purpose just to learn how it's built.</p>
         <ul class="about__facts">
           <li><span class="fact__k">Based in</span><span class="fact__v">Islamabad, Pakistan</span></li>
-          <li><span class="fact__k">Focus</span><span class="fact__v">Full Stack Web Development</span></li>
+          <li><span class="fact__k">Focus</span><span class="fact__v">Laravel & Full Stack Web Development</span></li>
           <li><span class="fact__k">Currently</span><span class="fact__v">Open to opportunities</span></li>
         </ul>
       </div>
@@ -95,7 +119,7 @@
           <div class="terminal__bar"><span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span></div>
           <div class="terminal__body">
             <p><span class="prompt">$</span> whoami</p>
-            <p class="out">your_name</p>
+            <p class="out">javeria-javed</p>
             <p><span class="prompt">$</span> cat focus.txt</p>
             <p class="out">Building reliable, well-crafted web apps.</p>
             <p><span class="prompt">$</span> <span class="typed-cursor">|</span></p>
@@ -104,160 +128,97 @@
       </div>
     </div>
   </section>
- 
+
   <!-- SKILLS -->
   <section class="section section--alt" id="skills">
     <p class="section__label">// 02 — skills</p>
     <h2 class="section__title">Tools of the trade.</h2>
     <div class="skills__grid">
- 
+
       <div class="skill-card">
         <h3 class="skill-card__title">Languages</h3>
         <ul class="skill-card__list">
-          <li>JavaScript / TypeScript</li>
-          <li>HTML</li>
+          <li>PHP</li>
+          <li>JavaScript</li>
+          <li>HTML5</li>
           <li>CSS3</li>
           <li>SQL</li>
         </ul>
       </div>
- 
+
       <div class="skill-card">
         <h3 class="skill-card__title">Frontend</h3>
         <ul class="skill-card__list">
-          <li>JQUERY</li>
-          <li>JavaScript</li>
-          <li>CSS</li>
-          <li>Responsive / Accessible UI</li>
+          <li>Bootstrap</li>
+          <li>jQuery</li>
+          <li>Responsive UI</li>
+          <li>Blade Templates</li>
         </ul>
       </div>
- 
+
       <div class="skill-card">
         <h3 class="skill-card__title">Backend</h3>
         <ul class="skill-card__list">
           <li>Laravel</li>
-          <li>SQL</li>
-          <li>PHP</li>
-          <li>Authentication & Security</li>
+          <li>MySQL</li>
+          <li>MVC Architecture</li>
+          <li>REST APIs</li>
         </ul>
       </div>
- 
+
       <div class="skill-card">
         <h3 class="skill-card__title">Tooling</h3>
         <ul class="skill-card__list">
           <li>Git & GitHub</li>
-          <li>Docker</li>
-          <li>CI/CD Basics</li>
-          <li>Testing (Jest)</li>
+          <li>Composer</li>
+          <li>phpMyAdmin</li>
+          <li>VS Code</li>
         </ul>
       </div>
- 
+
     </div>
   </section>
- 
+
   <!-- PROJECTS -->
   <section class="section" id="projects">
     <p class="section__label">// 03 — projects</p>
     <h2 class="section__title">Things I've built.</h2>
- 
+
     <div class="projects__grid">
- 
-      <article class="project-card">
-  <div class="project-card__top">
-    <span class="project-card__num">01</span>
-    <div class="project-card__links">
-      
-      <!-- LIVE DEMO (agar nahi hai to GitHub use karo) -->
-      <a href="https://github.com/javeria-01/laravel-blog-management-system" target="_blank">
-        Live ↗
-      </a>
 
-      <a href="https://github.com/javeria-01/laravel-blog-management-system" target="_blank">
-        Code ↗
-      </a>
-
-    </div>
-  </div>
-
-  <h3 class="project-card__title">Laravel Blog Management System</h3>
-  
-  <p class="project-card__desc">
-    A full-featured CRUD blog system built with Laravel where users can create, edit, delete and view posts with authentication support.
-  </p>
-
-  <ul class="tag-list">
-    <li>Laravel</li>
-    <li>PHP</li>
-    <li>MySQL</li>
-    <li>Bootstrap</li>
-  </ul>
-</article>
- 
       <article class="project-card">
         <div class="project-card__top">
-          <span class="project-card__num">02</span>
+          <span class="project-card__num">01</span>
           <div class="project-card__links">
-            <a href="#" aria-label="Live demo">Live ↗</a>
-            <a href="#" aria-label="Source code">Code ↗</a>
+            <a href="https://github.com/javeria-01/laravel-blog-management-system" target="_blank" rel="noopener">Code ↗</a>
           </div>
         </div>
-        <h3 class="project-card__title">Project Two</h3>
-        <p class="project-card__desc">A short description of what this project does and the problem it solves for its users.</p>
-        <ul class="tag-list"><li>Next.js</li><li>PostgreSQL</li><li>Stripe</li></ul>
+        <h3 class="project-card__title">Laravel Blog Management System</h3>
+        <p class="project-card__desc">
+          A full-featured CRUD blog system built with Laravel. Users can create, edit, delete, and view posts. Built on MVC architecture with MySQL database and Bootstrap UI.
+        </p>
+        <ul class="tag-list">
+          <li>Laravel</li>
+          <li>PHP</li>
+          <li>MySQL</li>
+          <li>Bootstrap</li>
+        </ul>
       </article>
- 
-      <article class="project-card">
-        <div class="project-card__top">
-          <span class="project-card__num">03</span>
-          <div class="project-card__links">
-            <a href="#" aria-label="Live demo">Live ↗</a>
-            <a href="#" aria-label="Source code">Code ↗</a>
-          </div>
-        </div>
-        <h3 class="project-card__title">Project Three</h3>
-        <p class="project-card__desc">A short description of what this project does and the problem it solves for its users.</p>
-        <ul class="tag-list"><li>Python</li><li>Flask</li><li>Docker</li></ul>
-      </article>
- 
-      <article class="project-card">
-        <div class="project-card__top">
-          <span class="project-card__num">04</span>
-          <div class="project-card__links">
-            <a href="#" aria-label="Live demo">Live ↗</a>
-            <a href="#" aria-label="Source code">Code ↗</a>
-          </div>
-        </div>
-        <h3 class="project-card__title">Project Four</h3>
-        <p class="project-card__desc">A short description of what this project does and the problem it solves for its users.</p>
-        <ul class="tag-list"><li>React</li><li>Express</li><li>Redis</li></ul>
-      </article>
- 
-      <article class="project-card">
-        <div class="project-card__top">
-          <span class="project-card__num">05</span>
-          <div class="project-card__links">
-            <a href="#" aria-label="Live demo">Live ↗</a>
-            <a href="#" aria-label="Source code">Code ↗</a>
-          </div>
-        </div>
-        <h3 class="project-card__title">Project Five</h3>
-        <p class="project-card__desc">A short description of what this project does and the problem it solves for its users.</p>
-        <ul class="tag-list"><li>TypeScript</li><li>GraphQL</li><li>AWS</li></ul>
-      </article>
- 
+
       <article class="project-card project-card--more">
         <h3 class="project-card__title">More on GitHub</h3>
         <p class="project-card__desc">Check out the rest of my work and contributions.</p>
-        <a href="#" class="btn btn--ghost btn--sm">Visit GitHub ↗</a>
+        <a href="https://github.com/javeria-01" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Visit GitHub ↗</a>
       </article>
- 
+
     </div>
   </section>
- 
+
   <!-- EXPERIENCE -->
   <section class="section section--alt" id="experience">
     <p class="section__label">// 04 — experience</p>
     <h2 class="section__title">Where I've worked.</h2>
- 
+
     <div class="timeline">
 
       <div class="timeline__item">
@@ -286,13 +247,13 @@
 
     </div>
   </section>
- 
+
   <!-- CONTACT -->
   <section class="section section--contact" id="contact">
     <p class="section__label">// 05 — contact</p>
     <h2 class="section__title">Let's build something.</h2>
     <p class="contact__sub">Have a project in mind, or just want to say hi? My inbox is open.</p>
- 
+
     <form class="contact__form" id="contactForm" action="https://formspree.io/f/xjgqbawv" method="POST" novalidate>
       <div class="field">
         <label for="name">Name</label>
@@ -309,20 +270,20 @@
       <button type="submit" class="btn btn--primary">Send message</button>
       <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
     </form>
- 
+
     <div class="contact__socials">
       <a href="mailto:javedjaveria076@gmail.com">Email</a>
       <a href="https://github.com/javeria-01" target="_blank" rel="noopener">GitHub</a>
       <a href="https://www.linkedin.com/in/javeria-javed-753880253/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </section>
- 
+
 </main>
- 
+
 <footer class="footer">
-  <p>// built by JAVERIA — <span id="year"></span></p>
+  <p>// built by Javeria Javed — <span id="year"></span></p>
 </footer>
- 
+
 <script src="main.js"></script>
 </body>
 </html>
