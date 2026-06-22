@@ -38,16 +38,103 @@ const observer = new IntersectionObserver((entries) => {
 revealTargets.forEach(el => observer.observe(el));
 
 // ============================================
-// Contact form (front-end only placeholder)
+// Contact form — validation + Formspree submit
 // ============================================
 const form = document.getElementById('contactForm');
 const status = document.getElementById('formStatus');
 
+// Helper: show error under a field
+function showError(input, message) {
+  clearError(input);
+  input.style.borderColor = '#F87171';
+  const err = document.createElement('span');
+  err.className = 'field-error';
+  err.style.cssText = 'color:#F87171;font-size:0.78rem;font-family:var(--font-mono);margin-top:4px;display:block;';
+  err.textContent = message;
+  input.parentNode.appendChild(err);
+}
+
+// Helper: remove error from a field
+function clearError(input) {
+  input.style.borderColor = '';
+  const existing = input.parentNode.querySelector('.field-error');
+  if (existing) existing.remove();
+}
+
+// Email format check
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+// Clear errors when user starts typing
 if (form) {
-  form.addEventListener('submit', (e) => {
+  form.querySelectorAll('input, textarea').forEach(input => {
+    input.addEventListener('input', () => clearError(input));
+  });
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    status.textContent = 'Message sent — thanks for reaching out! (Hook this up to a real backend or service like Formspree.)';
-    form.reset();
+
+    const nameInput    = form.querySelector('#name');
+    const emailInput   = form.querySelector('#email');
+    const messageInput = form.querySelector('#message');
+
+    const name    = nameInput.value.trim();
+    const email   = emailInput.value.trim();
+    const message = messageInput.value.trim();
+
+    // --- Validation ---
+    let hasError = false;
+
+    if (!name) {
+      showError(nameInput, 'Please enter your name.');
+      hasError = true;
+    } else if (name.length < 2) {
+      showError(nameInput, 'Name must be at least 2 characters.');
+      hasError = true;
+    }
+
+    if (!email) {
+      showError(emailInput, 'Please enter your email address.');
+      hasError = true;
+    } else if (!isValidEmail(email)) {
+      showError(emailInput, 'Please enter a valid email (e.g. name@example.com).');
+      hasError = true;
+    }
+
+    if (!message) {
+      showError(messageInput, 'Please write a message before sending.');
+      hasError = true;
+    } else if (message.length < 10) {
+      showError(messageInput, 'Message is too short — please write at least 10 characters.');
+      hasError = true;
+    }
+
+    if (hasError) return; // stop here if any field is wrong
+
+    // --- Submit to Formspree ---
+    status.textContent = 'Sending...';
+    status.style.color = 'var(--accent)';
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        status.textContent = 'Message sent — thanks for reaching out! I will get back to you soon.';
+        form.reset();
+        setTimeout(() => { status.textContent = ''; }, 3000);
+      } else {
+        status.style.color = '#F87171';
+        status.textContent = 'Something went wrong. Please email me directly at javedjaveria076@gmail.com';
+      }
+    } catch (error) {
+      status.style.color = '#F87171';
+      status.textContent = 'No internet connection. Please email me directly at javedjaveria076@gmail.com';
+    }
   });
 }
 
